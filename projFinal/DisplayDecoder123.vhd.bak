@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Bin7SegDecoder is
+	port(enable : in std_logic;
+		  decOut : out std_logic_vector(6 downto 0));
+end Bin7SegDecoder;
+
+architecture Behavioral of Bin7SegDecoder is
+	signal s_choose : unsigned(1 downto 0);
+begin
+	if (enable = '1') then
+		if (s_choose = "01") then
+			decOut <= "1111001";
+		elsif (s_choose = "10") then
+			decOut <= "0100100";
+		elsif (s_choose = "11") then
+			decOut <= "0110000";
+		else
+			decOut <= "1111111";
+		end if;
+end Behavioral;

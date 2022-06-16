@@ -41,6 +41,6 @@ begin
 			end if;
 		end if;
 	end process;
-	
+	-- actualTime <= std_logic_vector(s_count);
 	timeExp <= s_cntZero;
 end Behavioral;

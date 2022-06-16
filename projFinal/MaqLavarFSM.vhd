@@ -8,9 +8,7 @@ entity MaqLavarFSM is
 			P3    	   : in  std_logic;	-- Setting 3
 			-- startStop   : in  std_logic;	-- Start/stop
 			clk         : in  std_logic;	-- Clock
-			display1    : out std_logic;  -- Display P
-			display2    : out std_logic;  -- Display 1,2,3
-			display3    : out std_logic;  -- Display Time 
+			displayEn    : out std_logic;  -- Display
   			water_valve : out std_logic;	-- Water Valve (Meter Água) 
 			rinse       : out std_logic; 	-- Rinse (Enxaguar)
 			water_pump  : out std_logic;	-- Water Pump (Tirar Água)
@@ -18,16 +16,20 @@ entity MaqLavarFSM is
 			on_off      : out std_logic;	-- On/Off Output of the machine
 			newTime     : out std_logic;	-- New time
 			timeValue   : out std_logic_vector(7 downto 0);	-- Duration of the tasks 
+			timeEnable  : out std_logic;
 			timeExp     : in std_logic); -- Time Expired
 end MaqLavarFSM;
 
 architecture Behavioral of MaqLavarFSM is 
-
-	constant meterAgua_TIME : std_logic_vector(7 downto 0) := "00000111" -- 7s
-	constant enxaguar_TIME  : std_logic_vector(7 downto 0) := "00001010" -- 10s
-	constant tirarAgua_TIME : std_logic_vector(7 downto 0) := "00000100" -- 4s
-	constant	spin_TIME      : std_logic_vector(7 downto 0) := "00000101" -- 5s
-	constant finish_TIME    : std_logic_vector(7 downto 0) := "00000100" -- 4s
+	
+	constant P1_TIME        : std_logic_vector(7 downto 0) := "00110011"; -- 51s
+	constant P2_TIME        : std_logic_vector(7 downto 0) := "00011110"; -- 30s
+	constant P3_TIME        : std_logic_vector(7 downto 0) := "00001001"; -- 9s
+	constant meterAgua_TIME : std_logic_vector(7 downto 0) := "00000111"; -- 7s
+	constant enxaguar_TIME  : std_logic_vector(7 downto 0) := "00001010"; -- 10s
+	constant tirarAgua_TIME : std_logic_vector(7 downto 0) := "00000100"; -- 4s
+	constant	spin_TIME      : std_logic_vector(7 downto 0) := "00000101"; -- 5s
+	constant finish_TIME    : std_logic_vector(7 downto 0) := "00000010"; -- 2s  
 	
 	type TState is (TInit, TP1, TP2,
 						 TP3, TMeterAgua,
@@ -62,9 +64,7 @@ begin
 	begin
 		case (s_currentState) is
 		when TInit =>
-			display1 <= '1';
-			display2 <= '0';
-			display3 <= '0';
+			displayEn <= '1';
 			water_valve <= '0';
 			rinse <= '0';
 			water_pump <= '0';
@@ -100,15 +100,14 @@ begin
 			--end if;
 		
 		when TP1 =>
-			display1 <= '1';
-			display2 <= '1';
-			display3 <= '1';
+			displayEn <= '1';
 			water_valve <= '0';
 			rinse <= '0';
 			water_pump <= '0';
 			spin <= '0';
 			on_off <= '0';
 			timeEnable <= '0';
+			timeValue <= P1_TIME;
 				
 			--if (startStop = '1') then
 				s_nextState <= TMeterAgua;
@@ -117,15 +116,14 @@ begin
 			--end if;
 	
 		when TP2 =>
-			display1 <= '1';
-			display2 <= '1';
-			display3 <= '1';
+			displayEn <= '1';
 			water_valve <= '0';
 			rinse <= '0';
 			water_pump <= '0';
 			spin <= '0';
 			on_off <= '0';
 			timeEnable <= '0';
+			timeValue <= P2_TIME;
 			
 			-- if (startStop = '1') then
 				s_nextState <= TMeterAgua;
@@ -134,15 +132,14 @@ begin
 			-- end if;
 			
 		when TP3 =>
-			display1 <= '1';
-			display2 <= '1';
-			display3 <= '1';
+			displayEn <= '1';
 			water_valve <= '0';
 			rinse <= '0';
 			water_pump <= '0';
 			spin <= '0';
 			on_off <= '0';
 			timeEnable <= '0';
+			timeValue <= P3_TIME;
 			
 			-- if (startStop = '1') then
 				s_nextState <= TSpin;
@@ -151,9 +148,7 @@ begin
 			--end if;
 		
 		when TMeterAgua =>
-			display1 <= '1';
-			display2 <= '1';
-			display3 <= '1';
+			displayEn <= '1';
 			water_valve <= '1';
 			rinse <= '0';
 			water_pump <= '0';
@@ -175,9 +170,7 @@ begin
 			-- end if;
 		
 		when TEnxaguar =>
-			display1 <= '1';
-			display2 <= '1';
-			display3 <= '1';
+			displayEn <= '1';
 			water_valve <= '0';
 			rinse <= '1';
 			water_pump <= '0';
@@ -199,9 +192,7 @@ begin
 			-- end if;
 		
 		when TTirarAgua =>
-			display1 <= '1';
-			display2 <= '1';
-			display3 <= '1';
+			displayEn <= '1';
 			water_valve <= '0';
 			rinse <= '0';
 			water_pump <= '1';
@@ -216,9 +207,10 @@ begin
 				if (timeExp = '1') then
 					if (P1 = '1' and s_repeat = '1') then
 						s_nextState <= TMeterAgua;
+						s_repeat <= '0';
 					elsif (P1 = '1' or P2 = '1') then
 						s_nextState <= TSpin;
-					else
+					elsif (P1 = '1' or P2 = '1' or P3 = '1') then
 						s_nextState <= TFinish;
 					end if;
 				else
@@ -227,9 +219,7 @@ begin
 			-- end if;
 		
 		when TSpin =>
-			display1 <= '1';
-			display2 <= '1';
-			display3 <= '1';
+			displayEn <= '1';
 			water_valve <= '0';
 			rinse <= '0';
 			water_pump <= '0';
@@ -249,9 +239,7 @@ begin
 			-- end if;
 			
 		when TFinish =>
-			display1 <= '0';
-			display2 <= '0';
-			display3 <= '0';
+			displayEn <= '0';
 			water_valve <= '0';
 			rinse <= '0';
 			water_pump <= '0';
