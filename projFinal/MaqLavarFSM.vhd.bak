@@ -1,0 +1,26 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity MaqLavarFSM is 
+	port( reset 	   : in std_logic;
+			P1    	   : in std_logic;
+			P2    	   : in std_logic;
+			P3    	   : in std_logic;
+			startStop   : in std_logic;
+			clk         : in std_logic;
+			water_valve : out std_logic;
+			rinse       : out std_logic; 
+			water_pump  : out std_logic;
+			spin        : out std_logic; 
+			on_off      : out std_logic;
+			newTime     : out std_logic;
+			timeValue   : out std_logic_vector(7 downto 0);
+			timeExp     : in std_logic );
+end MaqLavarFSM;
+
+architecture Behavioral of MaqLavarFSM is 
+
+	constant meterAgua_TIME : std_logic_vector(7 downto 0) := ""
+	constant enxaguar_TIME  : std_logic_vector(7 downto 0) := ""
+	constant tirarAgua_TIME : std_logic_vector(7 downto 0) := ""
+	constant	spin_TIME      : std_logic_vector(7 downto 0) := ""
