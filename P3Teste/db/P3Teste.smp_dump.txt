@@ -1,5 +1,5 @@
 
-State Machine - |P3Teste|P3TesteFSM:inst|s_currentState
+State Machine - |P3Teste|P3TesteFSM:inst13|s_currentState
 Name s_currentState.TFinish s_currentState.TTirarAgua s_currentState.TSpin s_currentState.TP3 s_currentState.TInit 
 s_currentState.TInit 0 0 0 0 0 
 s_currentState.TP3 0 0 0 1 1 

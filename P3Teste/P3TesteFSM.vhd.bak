@@ -64,7 +64,7 @@ architecture Behavioral of P3TesteFSM is
 			
 			if (P3 = '1') then
 				s_nextState <= TP3;
-			else 
+			else
 				s_nextState <= TInit;
 			end if;
 			
@@ -76,13 +76,13 @@ architecture Behavioral of P3TesteFSM is
 			on_off <= '0';
 			timeEnable <= '0';
 			timeValue <= P3_TIME;
-		
-			if (startStop = '1') then
-				s_nextstate <= TSpin;
-			elsif (P3 = '0') then
-				s_nextState <= TInit;
+			
+			if (timeExp = '1') then
+				if (startStop = '1') then
+					s_nextstate <= TSpin;
 			else
 				s_nextState <= TP3;
+				end if;
 			end if;
 				
 		when Tspin =>

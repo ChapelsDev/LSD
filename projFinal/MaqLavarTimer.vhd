@@ -34,14 +34,15 @@ begin
 				else
 					if (s_counter = "00000000") then
 						s_cntZero <= '1';
+						actualTime <= std_logic_vector(s_counter);
 					else
 						s_counter <= s_counter  - 1;
 						s_cntZero <= '0';
+						actualTime <= std_logic_vector(s_counter);
 					end if;
 				end if;
 			end if;
 		end if;
 	end process;
-	actualTime <= std_logic_vector(s_counter);
 	timeExp <= s_cntZero;
 end Behavioral;
