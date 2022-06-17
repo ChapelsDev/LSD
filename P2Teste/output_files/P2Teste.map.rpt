@@ -1,5 +1,5 @@
 Analysis & Synthesis report for P2Teste
-Fri Jun 17 19:48:30 2022
+Fri Jun 17 20:59:51 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,13 +13,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |P2TesteFSM|s_currentState
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. State Machine - |P2Teste|P2TesteFSM:inst1|s_currentState
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: ClkDividerN:inst5
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +47,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 17 19:48:29 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 17 20:59:51 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; P2Teste                                     ;
-; Top-level Entity Name              ; P2TesteFSM                                  ;
+; Top-level Entity Name              ; P2Teste                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 34                                          ;
-;     Total combinational functions  ; 34                                          ;
-;     Dedicated logic registers      ; 8                                           ;
-; Total registers                    ; 8                                           ;
-; Total pins                         ; 28                                          ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 51                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -69,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; P2TesteFSM         ; P2Teste            ;
+; Top-level entity name                                            ; P2Teste            ; P2Teste            ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,54 +159,56 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                             ;
-+----------------------------------+-----------------+-----------------+-----------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path      ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------+---------+
-; P2TesteFSM.vhd                   ; yes             ; User VHDL File  ; D:/LSD/LSD/P2Teste/P2TesteFSM.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
+; ../projFinal/MaqLavarTimer.vhd   ; yes             ; User VHDL File                     ; D:/LSD/LSD/projFinal/MaqLavarTimer.vhd   ;         ;
+; ../projFinal/DisplayDecoderP.vhd ; yes             ; User VHDL File                     ; D:/LSD/LSD/projFinal/DisplayDecoderP.vhd ;         ;
+; ../projFinal/ClkDividerN.vhd     ; yes             ; User VHDL File                     ; D:/LSD/LSD/projFinal/ClkDividerN.vhd     ;         ;
+; ../projFinal/Bin7SegDecoder.vhd  ; yes             ; User VHDL File                     ; D:/LSD/LSD/projFinal/Bin7SegDecoder.vhd  ;         ;
+; P2Teste.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/LSD/LSD/P2Teste/P2Teste.bdf           ;         ;
+; P2TesteFSM.vhd                   ; yes             ; User VHDL File                     ; D:/LSD/LSD/P2Teste/P2TesteFSM.vhd        ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 34            ;
-;                                             ;               ;
-; Total combinational functions               ; 34            ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 17            ;
-;     -- 3 input functions                    ; 8             ;
-;     -- <=2 input functions                  ; 9             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 34            ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 8             ;
-;     -- Dedicated logic registers            ; 8             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 28            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; timeExp~input ;
-; Maximum fan-out                             ; 10            ;
-; Total fan-out                               ; 173           ;
-; Average fan-out                             ; 1.77          ;
-+---------------------------------------------+---------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+;                                             ;                ;
+; Total combinational functions               ; 0              ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 0              ;
+;     -- 3 input functions                    ; 0              ;
+;     -- <=2 input functions                  ; 0              ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 0              ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 51             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; HEX0[6]~output ;
+; Maximum fan-out                             ; 1              ;
+; Total fan-out                               ; 51             ;
+; Average fan-out                             ; 0.50           ;
++---------------------------------------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,14 +216,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |P2TesteFSM                ; 34 (34)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |P2TesteFSM         ; P2TesteFSM  ; work         ;
+; |P2Teste                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |P2Teste            ; P2Teste     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P2TesteFSM|s_currentState                                                                                                                                                               ;
+; State Machine - |P2Teste|P2TesteFSM:inst1|s_currentState                                                                                                                                                 ;
 +---------------------------+---------------------------+------------------------+---------------------------+----------------------+--------------------------+--------------------+----------------------+
 ; Name                      ; s_currentState.TMeterAgua ; s_currentState.TFinish ; s_currentState.TTirarAgua ; s_currentState.TSpin ; s_currentState.TEnxaguar ; s_currentState.TP2 ; s_currentState.TInit ;
 +---------------------------+---------------------------+------------------------+---------------------------+----------------------+--------------------------+--------------------+----------------------+
@@ -234,17 +237,43 @@ Encoding Type:  One-Hot
 +---------------------------+---------------------------+------------------------+---------------------------+----------------------+--------------------------+--------------------+----------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; water_valve$latch                                  ; WideOr3             ; yes                    ;
-; rinse$latch                                        ; WideOr3             ; yes                    ;
-; s_ultimoestado                                     ; Selector4           ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; ClkDividerN:inst5|clkOut                   ; Stuck at VCC due to stuck port data_in ;
+; MaqLavarTimer:inst3|actualTime[0..7]       ; Stuck at GND due to stuck port clock   ;
+; MaqLavarTimer:inst3|s_cntZero              ; Stuck at GND due to stuck port clock   ;
+; MaqLavarTimer:inst3|s_counter[0..7]        ; Stuck at VCC due to stuck port clock   ;
+; P2TesteFSM:inst1|s_stateChanged            ; Stuck at VCC due to stuck port clock   ;
+; ClkDividerN:inst5|s_divCounter             ; Lost fanout                            ;
+; P2TesteFSM:inst1|s_currentState.TInit      ; Stuck at GND due to stuck port clock   ;
+; P2TesteFSM:inst1|s_currentState.TP2        ; Stuck at GND due to stuck port clock   ;
+; P2TesteFSM:inst1|s_currentState.TEnxaguar  ; Stuck at GND due to stuck port clock   ;
+; P2TesteFSM:inst1|s_currentState.TSpin      ; Stuck at GND due to stuck port clock   ;
+; P2TesteFSM:inst1|s_currentState.TTirarAgua ; Stuck at GND due to stuck port clock   ;
+; P2TesteFSM:inst1|s_currentState.TFinish    ; Stuck at GND due to stuck port clock   ;
+; P2TesteFSM:inst1|s_currentState.TMeterAgua ; Stuck at GND due to stuck port clock   ;
+; Total Number of Removed Registers = 27     ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                  ;
++--------------------------+---------------------------+-----------------------------------------------------------------------+
+; Register name            ; Reason for Removal        ; Registers Removed due to This Register                                ;
++--------------------------+---------------------------+-----------------------------------------------------------------------+
+; ClkDividerN:inst5|clkOut ; Stuck at VCC              ; MaqLavarTimer:inst3|actualTime[0], MaqLavarTimer:inst3|actualTime[1], ;
+;                          ; due to stuck port data_in ; MaqLavarTimer:inst3|actualTime[2], MaqLavarTimer:inst3|actualTime[3], ;
+;                          ;                           ; MaqLavarTimer:inst3|actualTime[4], MaqLavarTimer:inst3|actualTime[5], ;
+;                          ;                           ; MaqLavarTimer:inst3|actualTime[6], MaqLavarTimer:inst3|actualTime[7], ;
+;                          ;                           ; MaqLavarTimer:inst3|s_cntZero, MaqLavarTimer:inst3|s_counter[0],      ;
+;                          ;                           ; MaqLavarTimer:inst3|s_counter[1], MaqLavarTimer:inst3|s_counter[2],   ;
+;                          ;                           ; MaqLavarTimer:inst3|s_counter[3], MaqLavarTimer:inst3|s_counter[4],   ;
+;                          ;                           ; MaqLavarTimer:inst3|s_counter[5], MaqLavarTimer:inst3|s_counter[6],   ;
+;                          ;                           ; MaqLavarTimer:inst3|s_counter[7], P2TesteFSM:inst1|s_stateChanged     ;
++--------------------------+---------------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -252,7 +281,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -262,14 +291,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; s_stateChanged                         ; 1       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClkDividerN:inst5 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; divfactor      ; 2     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -277,19 +306,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 8                           ;
-;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 44                          ;
-;     normal            ; 44                          ;
+; boundary_port         ; 51                          ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 17                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.18                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -308,7 +331,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jun 17 19:48:21 2022
+    Info: Processing started: Fri Jun 17 20:59:43 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off P2Teste -c P2Teste
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -332,7 +355,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file p2teste
 Info (12021): Found 2 design units, including 1 entities, in source file p2testefsm.vhd
     Info (12022): Found design unit 1: P2TesteFSM-Behavioral File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 22
     Info (12023): Found entity 1: P2TesteFSM File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 4
-Info (12127): Elaborating entity "P2TesteFSM" for the top level hierarchy
+Info (12127): Elaborating entity "P2Teste" for the top level hierarchy
+Info (12128): Elaborating entity "Bin7SegDecoder" for hierarchy "Bin7SegDecoder:inst51"
+Info (12128): Elaborating entity "MaqLavarTimer" for hierarchy "MaqLavarTimer:inst3"
+Info (12128): Elaborating entity "ClkDividerN" for hierarchy "ClkDividerN:inst5"
+Info (12128): Elaborating entity "P2TesteFSM" for hierarchy "P2TesteFSM:inst1"
 Warning (10492): VHDL Process Statement warning at P2TesteFSM.vhd(88): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 88
 Warning (10492): VHDL Process Statement warning at P2TesteFSM.vhd(103): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 103
 Warning (10492): VHDL Process Statement warning at P2TesteFSM.vhd(119): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 119
@@ -347,24 +374,70 @@ Warning (10631): VHDL Process Statement warning at P2TesteFSM.vhd(58): inferring
 Info (10041): Inferred latch for "s_ultimoestado" at P2TesteFSM.vhd(58) File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 58
 Info (10041): Inferred latch for "rinse" at P2TesteFSM.vhd(58) File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 58
 Info (10041): Inferred latch for "water_valve" at P2TesteFSM.vhd(58) File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 58
-Warning (13012): Latch s_ultimoestado has unsafe behavior File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 35
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal s_currentState.TEnxaguar File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 33
+Info (12128): Elaborating entity "DisplayDecoderP" for hierarchy "DisplayDecoderP:inst4"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "display2[5]" is stuck at VCC File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 10
-    Warning (13410): Pin "timeValue[5]" is stuck at GND File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 17
-    Warning (13410): Pin "timeValue[6]" is stuck at GND File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 17
-    Warning (13410): Pin "timeValue[7]" is stuck at GND File: D:/LSD/LSD/P2Teste/P2TesteFSM.vhd Line: 17
-Info (286030): Timing-Driven Synthesis is running
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[5]" is stuck at GND
+    Warning (13410): Pin "HEX4[4]" is stuck at GND
+    Warning (13410): Pin "HEX4[3]" is stuck at GND
+    Warning (13410): Pin "HEX4[2]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX4[0]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC
+    Warning (13410): Pin "HEX6[3]" is stuck at VCC
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at GND
+    Warning (13410): Pin "HEX7[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[4]" is stuck at GND
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 34 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Fri Jun 17 19:48:30 2022
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 47 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Fri Jun 17 20:59:52 2022
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:22
 
 

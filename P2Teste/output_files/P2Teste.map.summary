@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Jun 17 19:48:29 2022
+Analysis & Synthesis Status : Successful - Fri Jun 17 20:59:51 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : P2Teste
-Top-level Entity Name : P2TesteFSM
+Top-level Entity Name : P2Teste
 Family : Cyclone IV E
-Total logic elements : 34
-    Total combinational functions : 34
-    Dedicated logic registers : 8
-Total registers : 8
-Total pins : 28
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 51
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
