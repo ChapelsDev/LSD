@@ -8,6 +8,7 @@ entity MaqLavarTimer is
 		  newTime	 : in  std_logic;
 		  timeEnable :	in  std_logic;
 		  timeVal	 : in  std_logic_vector(7 downto 0);
+		  actualTime : out std_logic_vector(7 downto 0);
 		  timeExp	 : out std_logic);
 end MaqLavarTimer;
 
@@ -19,7 +20,7 @@ architecture Behavioral of MaqLavarTimer is
 begin
 	process(clk)
 	begin
-		if (rising_edge(clk)) then
+		if (not rising_edge(clk)) then
 			if (reset = '1') then
 				s_counter <= (others => '1');
 				s_cntZero <= '0';
@@ -41,6 +42,6 @@ begin
 			end if;
 		end if;
 	end process;
-	-- actualTime <= std_logic_vector(s_count);
+	actualTime <= std_logic_vector(s_counter);
 	timeExp <= s_cntZero;
 end Behavioral;

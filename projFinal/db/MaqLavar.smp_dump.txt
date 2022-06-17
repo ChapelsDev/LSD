@@ -1,5 +1,5 @@
 
-State Machine - |MaqLavarFSM|s_currentState
+State Machine - |MaqLavarTest|MaqLavarFSM:inst21|s_currentState
 Name s_currentState.TFinish s_currentState.TTirarAgua s_currentState.TSpin s_currentState.TEnxaguar s_currentState.TMeterAgua s_currentState.TP3 s_currentState.TP2 s_currentState.TP1 s_currentState.TInit 
 s_currentState.TInit 0 0 0 0 0 0 0 0 0 
 s_currentState.TP1 0 0 0 0 0 0 0 1 1 

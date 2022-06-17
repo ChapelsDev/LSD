@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MaqLavar
-Thu Jun 16 23:44:46 2022
+Fri Jun 17 15:14:07 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,14 +13,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |MaqLavarFSM|s_currentState
+  8. State Machine - |MaqLavarTest|MaqLavarFSM:inst21|s_currentState
   9. User-Specified and Inferred Latches
  10. General Register Statistics
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 13. Parameter Settings for User Entity Instance: DebounceUnit:inst8
+ 14. Parameter Settings for User Entity Instance: DebounceUnit:inst15
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,16 +49,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 16 23:44:46 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 17 15:14:06 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MaqLavar                                    ;
-; Top-level Entity Name              ; MaqLavarFSM                                 ;
+; Top-level Entity Name              ; MaqLavarTest                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 45                                          ;
-;     Total combinational functions  ; 45                                          ;
-;     Dedicated logic registers      ; 10                                          ;
-; Total registers                    ; 10                                          ;
-; Total pins                         ; 22                                          ;
+; Total logic elements               ; 239                                         ;
+;     Total combinational functions  ; 230                                         ;
+;     Dedicated logic registers      ; 76                                          ;
+; Total registers                    ; 76                                          ;
+; Total pins                         ; 40                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -70,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; MaqLavarFSM        ; MaqLavar           ;
+; Top-level entity name                                            ; MaqLavarTest       ; MaqLavar           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -167,60 +169,74 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; MaqLavarFSM.vhd                  ; yes             ; User VHDL File  ; C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+; MaqLavarFSM.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd       ;         ;
+; MaqLavarTimer.vhd                ; yes             ; User VHDL File                     ; C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd     ;         ;
+; DisplayDecoderP.vhd              ; yes             ; User VHDL File                     ; C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoderP.vhd   ;         ;
+; MaqLavarReg.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarReg.vhd       ;         ;
+; DisplayDecoder123.vhd            ; yes             ; User VHDL File                     ; C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd ;         ;
+; Bin7SegDecoder.vhd               ; yes             ; User VHDL File                     ; C:/Users/Afonso/Downloads/LSD/projFinal/Bin7SegDecoder.vhd    ;         ;
+; MaqLavarTest.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTest.bdf      ;         ;
+; DebouceUnit.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Afonso/Downloads/LSD/projFinal/DebouceUnit.vhd       ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 45          ;
-;                                             ;             ;
-; Total combinational functions               ; 45          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 18          ;
-;     -- 3 input functions                    ; 15          ;
-;     -- <=2 input functions                  ; 12          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 45          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 10          ;
-;     -- Dedicated logic registers            ; 10          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 22          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 10          ;
-; Total fan-out                               ; 197         ;
-; Average fan-out                             ; 1.99        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 239            ;
+;                                             ;                ;
+; Total combinational functions               ; 230            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 85             ;
+;     -- 3 input functions                    ; 57             ;
+;     -- <=2 input functions                  ; 88             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 172            ;
+;     -- arithmetic mode                      ; 58             ;
+;                                             ;                ;
+; Total registers                             ; 76             ;
+;     -- Dedicated logic registers            ; 76             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 40             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 77             ;
+; Total fan-out                               ; 946            ;
+; Average fan-out                             ; 2.45           ;
++---------------------------------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |MaqLavarFSM               ; 45 (45)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |MaqLavarFSM        ; MaqLavarFSM ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name       ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+-------------------+--------------+
+; |MaqLavarTest                 ; 230 (0)             ; 76 (0)                    ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |MaqLavarTest                          ; MaqLavarTest      ; work         ;
+;    |Bin7SegDecoder:inst5|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavarTest|Bin7SegDecoder:inst5     ; Bin7SegDecoder    ; work         ;
+;    |DebounceUnit:inst15|      ; 67 (67)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavarTest|DebounceUnit:inst15      ; DebounceUnit      ; work         ;
+;    |DebounceUnit:inst8|       ; 67 (67)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavarTest|DebounceUnit:inst8       ; DebounceUnit      ; work         ;
+;    |DisplayDecoder123:inst22| ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavarTest|DisplayDecoder123:inst22 ; DisplayDecoder123 ; work         ;
+;    |MaqLavarFSM:inst21|       ; 46 (46)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavarTest|MaqLavarFSM:inst21       ; MaqLavarFSM       ; work         ;
+;    |MaqLavarReg:inst30|       ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavarTest|MaqLavarReg:inst30       ; MaqLavarReg       ; work         ;
+;    |MaqLavarTimer:inst320|    ; 28 (28)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MaqLavarTest|MaqLavarTimer:inst320    ; MaqLavarTimer     ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |MaqLavarFSM|s_currentState                                                                                                                                                                                                        ;
+; State Machine - |MaqLavarTest|MaqLavarFSM:inst21|s_currentState                                                                                                                                                                                    ;
 +---------------------------+------------------------+---------------------------+----------------------+--------------------------+---------------------------+--------------------+--------------------+--------------------+----------------------+
 ; Name                      ; s_currentState.TFinish ; s_currentState.TTirarAgua ; s_currentState.TSpin ; s_currentState.TEnxaguar ; s_currentState.TMeterAgua ; s_currentState.TP3 ; s_currentState.TP2 ; s_currentState.TP1 ; s_currentState.TInit ;
 +---------------------------+------------------------+---------------------------+----------------------+--------------------------+---------------------------+--------------------+--------------------+--------------------+----------------------+
@@ -236,22 +252,28 @@ Encoding Type:  One-Hot
 +---------------------------+------------------------+---------------------------+----------------------+--------------------------+---------------------------+--------------------+--------------------+--------------------+----------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; s_nextState.TFinish_284                            ; Selector15          ; yes                    ;
-; s_nextState.TMeterAgua_380                         ; Selector15          ; yes                    ;
-; s_nextState.TEnxaguar_356                          ; Selector15          ; yes                    ;
-; s_nextState.TTirarAgua_308                         ; Selector15          ; yes                    ;
-; s_nextState.TSpin_332                              ; Selector15          ; yes                    ;
-; s_nextState.TInit_476                              ; Selector15          ; yes                    ;
-; s_nextState.TP1_452                                ; Selector15          ; yes                    ;
-; s_nextState.TP2_428                                ; Selector15          ; yes                    ;
-; s_nextState.TP3_404                                ; Selector15          ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; DisplayDecoder123:inst22|decOut[6]                  ; GND                           ; yes                    ;
+; DisplayDecoder123:inst22|decOut[4]                  ; GND                           ; yes                    ;
+; DisplayDecoder123:inst22|decOut[3]                  ; GND                           ; yes                    ;
+; DisplayDecoder123:inst22|decOut[2]                  ; GND                           ; yes                    ;
+; DisplayDecoder123:inst22|decOut[1]                  ; GND                           ; yes                    ;
+; DisplayDecoder123:inst22|decOut[0]                  ; GND                           ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TP2_426              ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TMeterAgua_378       ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TTirarAgua_306       ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TInit_474            ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TP3_402              ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TEnxaguar_354        ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TSpin_330            ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TP1_450              ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; MaqLavarFSM:inst21|s_nextState.TFinish_282          ; MaqLavarFSM:inst21|Selector17 ; yes                    ;
+; Number of user-specified and inferred latches = 15  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -260,12 +282,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
+; Total registers                              ; 76    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 44    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -275,18 +297,56 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; s_stateChanged                         ; 1       ;
-; Total number of inverted registers = 1 ;         ;
+; MaqLavarTimer:inst320|s_counter[7]     ; 2       ;
+; MaqLavarFSM:inst21|s_stateChanged      ; 9       ;
+; MaqLavarTimer:inst320|s_counter[0]     ; 2       ;
+; MaqLavarTimer:inst320|s_counter[1]     ; 2       ;
+; MaqLavarTimer:inst320|s_counter[2]     ; 2       ;
+; MaqLavarTimer:inst320|s_counter[3]     ; 2       ;
+; MaqLavarTimer:inst320|s_counter[4]     ; 2       ;
+; MaqLavarTimer:inst320|s_counter[5]     ; 2       ;
+; MaqLavarTimer:inst320|s_counter[6]     ; 2       ;
+; Total number of inverted registers = 9 ;         ;
 +----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |MaqLavarFSM|s_nextState   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |MaqLavarTest|DebounceUnit:inst8|s_debounceCnt[15] ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |MaqLavarTest|DebounceUnit:inst15|s_debounceCnt[5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |MaqLavarTest|MaqLavarTimer:inst320|s_counter[4]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MaqLavarTest|DisplayDecoder123:inst22|decOut[6]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |MaqLavarTest|MaqLavarFSM:inst21|s_nextState       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:inst8 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                         ;
+; msecmininwidth ; 100   ; Signed Integer                         ;
+; inpolarity     ; '1'   ; Enumerated                             ;
+; outpolarity    ; '1'   ; Enumerated                             ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:inst15 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                          ;
+; msecmininwidth ; 100   ; Signed Integer                          ;
+; inpolarity     ; '1'   ; Enumerated                              ;
+; outpolarity    ; '1'   ; Enumerated                              ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -294,19 +354,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 10                          ;
-;     plain             ; 10                          ;
-; cycloneiii_lcell_comb ; 51                          ;
-;     normal            ; 51                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 18                          ;
+; boundary_port         ; 40                          ;
+; cycloneiii_ff         ; 76                          ;
+;     ENA               ; 44                          ;
+;     plain             ; 32                          ;
+; cycloneiii_lcell_comb ; 236                         ;
+;     arith             ; 58                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 178                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 56                          ;
+;         4 data inputs ; 85                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.29                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.97                        ;
 +-----------------------+-----------------------------+
 
 
@@ -325,7 +390,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Jun 16 23:44:38 2022
+    Info: Processing started: Fri Jun 17 15:13:56 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MaqLavar -c MaqLavar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -333,13 +398,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file maqlava
     Info (12022): Found design unit 1: MaqLavarFSM-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 23
     Info (12023): Found entity 1: MaqLavarFSM File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file maqlavartimer.vhd
-    Info (12022): Found design unit 1: MaqLavarTimer-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd Line: 15
+    Info (12022): Found design unit 1: MaqLavarTimer-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd Line: 14
     Info (12023): Found entity 1: MaqLavarTimer File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file displaydecoderp.vhd
-    Info (12022): Found design unit 1: DisplayDecoderP-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoderP.vhd Line: 10
+    Info (12022): Found design unit 1: DisplayDecoderP-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoderP.vhd Line: 9
     Info (12023): Found entity 1: DisplayDecoderP File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoderP.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file maqlavarreg.vhd
-    Info (12022): Found design unit 1: MaqLavarReg-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarReg.vhd Line: 17
+    Info (12022): Found design unit 1: MaqLavarReg-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarReg.vhd Line: 18
     Info (12023): Found entity 1: MaqLavarReg File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarReg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file displaydecoder123.vhd
     Info (12022): Found design unit 1: DisplayDecoder123-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 10
@@ -347,21 +412,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file display
 Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
     Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/Bin7SegDecoder.vhd Line: 9
     Info (12023): Found entity 1: Bin7SegDecoder File: C:/Users/Afonso/Downloads/LSD/projFinal/Bin7SegDecoder.vhd Line: 4
-Info (12127): Elaborating entity "MaqLavarFSM" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(75): signal "P1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(77): signal "P2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(79): signal "P3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 79
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(164): signal "P1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(164): signal "P2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(186): signal "P1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(186): signal "P2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 186
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(208): signal "P1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 208
+Info (12021): Found 1 design units, including 1 entities, in source file maqlavartest.bdf
+    Info (12023): Found entity 1: MaqLavarTest
+Info (12021): Found 2 design units, including 1 entities, in source file debouceunit.vhd
+    Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/DebouceUnit.vhd Line: 15
+    Info (12023): Found entity 1: DebounceUnit File: C:/Users/Afonso/Downloads/LSD/projFinal/DebouceUnit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file clkdividern.vhd
+    Info (12022): Found design unit 1: ClkDividerN-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/ClkDividerN.vhd Line: 11
+    Info (12023): Found entity 1: ClkDividerN File: C:/Users/Afonso/Downloads/LSD/projFinal/ClkDividerN.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pulsegeneratorn.vhd
+    Info (12022): Found design unit 1: PulseGeneratorN-Behavioral File: C:/Users/Afonso/Downloads/LSD/projFinal/PulseGeneratorN.vhd Line: 13
+    Info (12023): Found entity 1: PulseGeneratorN File: C:/Users/Afonso/Downloads/LSD/projFinal/PulseGeneratorN.vhd Line: 5
+Info (12127): Elaborating entity "MaqLavarTest" for the top level hierarchy
+Warning (275089): Not all bits in bus "LEDG[8..0]" are used
+Warning (275080): Converted elements in bus name "LEDG" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "LEDG[8]" to "LEDG8"
+    Warning (275081): Converted element name(s) from "LEDG[0]" to "LEDG0"
+Info (12128): Elaborating entity "Bin7SegDecoder" for hierarchy "Bin7SegDecoder:inst5"
+Info (12128): Elaborating entity "MaqLavarFSM" for hierarchy "MaqLavarFSM:inst21"
+Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(112): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(128): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(144): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 144
 Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(208): signal "s_repeat" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 208
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(211): signal "P1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 211
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(211): signal "P2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 211
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(213): signal "P1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 213
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(213): signal "P2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 213
-Warning (10492): VHDL Process Statement warning at MaqLavarFSM.vhd(213): signal "P3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 213
 Warning (10631): VHDL Process Statement warning at MaqLavarFSM.vhd(63): inferring latch(es) for signal or variable "s_nextState", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
 Warning (10631): VHDL Process Statement warning at MaqLavarFSM.vhd(63): inferring latch(es) for signal or variable "s_repeat", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
 Info (10041): Inferred latch for "s_repeat" at MaqLavarFSM.vhd(63) File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
@@ -374,38 +446,54 @@ Info (10041): Inferred latch for "s_nextState.TP3" at MaqLavarFSM.vhd(63) File: 
 Info (10041): Inferred latch for "s_nextState.TP2" at MaqLavarFSM.vhd(63) File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
 Info (10041): Inferred latch for "s_nextState.TP1" at MaqLavarFSM.vhd(63) File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
 Info (10041): Inferred latch for "s_nextState.TInit" at MaqLavarFSM.vhd(63) File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-Warning (13012): Latch s_nextState.TFinish_284 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal timeExp File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 20
-Warning (13012): Latch s_nextState.TMeterAgua_380 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal timeExp File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 20
-Warning (13012): Latch s_nextState.TEnxaguar_356 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal s_currentState.TEnxaguar File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 39
-Warning (13012): Latch s_nextState.TTirarAgua_308 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal s_currentState.TTirarAgua File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 39
-Warning (13012): Latch s_nextState.TSpin_332 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal timeExp File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 20
-Warning (13012): Latch s_nextState.TInit_476 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal timeExp File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 20
-Warning (13012): Latch s_nextState.TP1_452 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1 File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 6
-Warning (13012): Latch s_nextState.TP2_428 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1 File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 6
-Warning (13012): Latch s_nextState.TP3_404 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal P3 File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 8
+Info (12128): Elaborating entity "MaqLavarReg" for hierarchy "MaqLavarReg:inst30"
+Info (12128): Elaborating entity "DebounceUnit" for hierarchy "DebounceUnit:inst8"
+Info (12128): Elaborating entity "MaqLavarTimer" for hierarchy "MaqLavarTimer:inst320"
+Info (12128): Elaborating entity "DisplayDecoder123" for hierarchy "DisplayDecoder123:inst22"
+Warning (10631): VHDL Process Statement warning at DisplayDecoder123.vhd(12): inferring latch(es) for signal or variable "decOut", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (10041): Inferred latch for "decOut[0]" at DisplayDecoder123.vhd(12) File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (10041): Inferred latch for "decOut[1]" at DisplayDecoder123.vhd(12) File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (10041): Inferred latch for "decOut[2]" at DisplayDecoder123.vhd(12) File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (10041): Inferred latch for "decOut[3]" at DisplayDecoder123.vhd(12) File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (10041): Inferred latch for "decOut[4]" at DisplayDecoder123.vhd(12) File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (10041): Inferred latch for "decOut[5]" at DisplayDecoder123.vhd(12) File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (10041): Inferred latch for "decOut[6]" at DisplayDecoder123.vhd(12) File: C:/Users/Afonso/Downloads/LSD/projFinal/DisplayDecoder123.vhd Line: 12
+Info (12128): Elaborating entity "DisplayDecoderP" for hierarchy "DisplayDecoderP:inst20"
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TP2_426 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarReg:inst30|dataP2 File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarReg.vhd Line: 12
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TMeterAgua_378 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarTimer:inst320|s_cntZero File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd Line: 22
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TTirarAgua_306 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarFSM:inst21|s_currentState.TTirarAgua File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 39
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TInit_474 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarTimer:inst320|s_cntZero File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd Line: 22
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TP3_402 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarReg:inst30|dataP3 File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarReg.vhd Line: 13
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TEnxaguar_354 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarFSM:inst21|s_currentState.TEnxaguar File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 39
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TSpin_330 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarTimer:inst320|s_cntZero File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd Line: 22
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TP1_450 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarReg:inst30|dataP1 File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarReg.vhd Line: 11
+Warning (13012): Latch MaqLavarFSM:inst21|s_nextState.TFinish_282 has unsafe behavior File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 63
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MaqLavarTimer:inst320|s_cntZero File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarTimer.vhd Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "timeValue[6]" is stuck at GND File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 18
-    Warning (13410): Pin "timeValue[7]" is stuck at GND File: C:/Users/Afonso/Downloads/LSD/projFinal/MaqLavarFSM.vhd Line: 18
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 45 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Thu Jun 16 23:44:46 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 240 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Fri Jun 17 15:14:07 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:20
 
 
