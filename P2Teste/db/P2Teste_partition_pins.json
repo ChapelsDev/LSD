@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "display1",
+					"strict" : false
+				},
+				{
+					"name" : "display2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "water_valve",
+					"strict" : false
+				},
+				{
+					"name" : "rinse",
+					"strict" : false
+				},
+				{
+					"name" : "water_pump",
+					"strict" : false
+				},
+				{
+					"name" : "spin",
+					"strict" : false
+				},
+				{
+					"name" : "on_off",
+					"strict" : false
+				},
+				{
+					"name" : "newTime",
+					"strict" : false
+				},
+				{
+					"name" : "timeValue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timeValue[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timeValue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timeValue[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeValue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timeEnable",
+					"strict" : false
+				},
+				{
+					"name" : "timeExp",
+					"strict" : false
+				},
+				{
+					"name" : "startStop",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "P2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

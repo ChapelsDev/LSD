@@ -1,0 +1,44 @@
+|P2TesteFSM
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_currentState.OUTPUTSELECT
+reset => s_stateChanged.OUTPUTSELECT
+P2 => Selector7.IN3
+P2 => Selector6.IN1
+startStop => set_proc.IN0
+startStop => Selector12.IN3
+startStop => Selector7.IN1
+clk => s_stateChanged.CLK
+clk => s_currentState~1.DATAIN
+display1 <= display1.DB_MAX_OUTPUT_PORT_TYPE
+display2[0] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[1] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[2] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[3] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+display2[4] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display2[5] <= <VCC>
+display2[6] <= display2.DB_MAX_OUTPUT_PORT_TYPE
+water_valve <= water_valve$latch.DB_MAX_OUTPUT_PORT_TYPE
+rinse <= rinse$latch.DB_MAX_OUTPUT_PORT_TYPE
+water_pump <= water_pump.DB_MAX_OUTPUT_PORT_TYPE
+spin <= spin.DB_MAX_OUTPUT_PORT_TYPE
+on_off <= on_off.DB_MAX_OUTPUT_PORT_TYPE
+newTime <= s_stateChanged.DB_MAX_OUTPUT_PORT_TYPE
+timeValue[0] <= timeValue.DB_MAX_OUTPUT_PORT_TYPE
+timeValue[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+timeValue[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+timeValue[3] <= timeValue.DB_MAX_OUTPUT_PORT_TYPE
+timeValue[4] <= timeValue[4].DB_MAX_OUTPUT_PORT_TYPE
+timeValue[5] <= <GND>
+timeValue[6] <= <GND>
+timeValue[7] <= <GND>
+timeEnable <= on_off.DB_MAX_OUTPUT_PORT_TYPE
+timeExp => set_proc.IN1
+timeExp => Selector6.IN3
+timeExp => Selector11.IN2
+
+
