@@ -2,4 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1000mV 100C Model Setup 'ClkDividerN:inst|clkOut'
+Slack : -4.820
+TNS   : -83.816
+
+Type  : Slow 1000mV 100C Model Setup 'CLOCK_50'
+Slack : -4.767
+TNS   : -120.900
+
+Type  : Slow 1000mV 100C Model Setup 'KEY[1]'
+Slack : -2.832
+TNS   : -5.350
+
+Type  : Slow 1000mV 100C Model Setup 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : -1.273
+TNS   : -2.351
+
+Type  : Slow 1000mV 100C Model Hold 'KEY[1]'
+Slack : -0.246
+TNS   : -0.282
+
+Type  : Slow 1000mV 100C Model Hold 'ClkDividerN:inst|clkOut'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1000mV 100C Model Hold 'CLOCK_50'
+Slack : 0.544
+TNS   : 0.000
+
+Type  : Slow 1000mV 100C Model Hold 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : 0.648
+TNS   : 0.000
+
+Type  : Slow 1000mV 100C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -50.601
+
+Type  : Slow 1000mV 100C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1000mV 100C Model Minimum Pulse Width 'ClkDividerN:inst|clkOut'
+Slack : -1.763
+TNS   : -47.601
+
+Type  : Slow 1000mV 100C Model Minimum Pulse Width 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1000mV -40C Model Setup 'CLOCK_50'
+Slack : -4.568
+TNS   : -116.443
+
+Type  : Slow 1000mV -40C Model Setup 'ClkDividerN:inst|clkOut'
+Slack : -4.487
+TNS   : -80.812
+
+Type  : Slow 1000mV -40C Model Setup 'KEY[1]'
+Slack : -2.631
+TNS   : -4.852
+
+Type  : Slow 1000mV -40C Model Setup 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : -1.262
+TNS   : -2.398
+
+Type  : Slow 1000mV -40C Model Hold 'KEY[1]'
+Slack : -0.291
+TNS   : -0.418
+
+Type  : Slow 1000mV -40C Model Hold 'ClkDividerN:inst|clkOut'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1000mV -40C Model Hold 'CLOCK_50'
+Slack : 0.516
+TNS   : 0.000
+
+Type  : Slow 1000mV -40C Model Hold 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : 0.699
+TNS   : 0.000
+
+Type  : Slow 1000mV -40C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -50.601
+
+Type  : Slow 1000mV -40C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1000mV -40C Model Minimum Pulse Width 'ClkDividerN:inst|clkOut'
+Slack : -1.763
+TNS   : -47.601
+
+Type  : Slow 1000mV -40C Model Minimum Pulse Width 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast 1000mV -40C Model Setup 'ClkDividerN:inst|clkOut'
+Slack : -2.438
+TNS   : -36.794
+
+Type  : Fast 1000mV -40C Model Setup 'CLOCK_50'
+Slack : -2.107
+TNS   : -52.673
+
+Type  : Fast 1000mV -40C Model Setup 'KEY[1]'
+Slack : -1.062
+TNS   : -1.383
+
+Type  : Fast 1000mV -40C Model Setup 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : -0.261
+TNS   : -0.366
+
+Type  : Fast 1000mV -40C Model Hold 'KEY[1]'
+Slack : -0.070
+TNS   : -0.125
+
+Type  : Fast 1000mV -40C Model Hold 'ClkDividerN:inst|clkOut'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast 1000mV -40C Model Hold 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Fast 1000mV -40C Model Hold 'CLOCK_50'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Fast 1000mV -40C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -50.601
+
+Type  : Fast 1000mV -40C Model Minimum Pulse Width 'KEY[1]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1000mV -40C Model Minimum Pulse Width 'ClkDividerN:inst|clkOut'
+Slack : -1.763
+TNS   : -47.601
+
+Type  : Fast 1000mV -40C Model Minimum Pulse Width 'P1TesteFSM:inst14|s_currentState.TFinish'
+Slack : 0.455
+TNS   : 0.000
+
 ------------------------------------------------------------

@@ -1,10 +1,12 @@
 
-State Machine - |P1TesteFSM|s_currentState
-Name s_currentState.TMeterAgua s_currentState.TFinish s_currentState.TTirarAgua s_currentState.TSpin s_currentState.TEnxaguar s_currentState.TP1 s_currentState.TInit 
-s_currentState.TInit 0 0 0 0 0 0 0 
-s_currentState.TP1 0 0 0 0 0 1 1 
-s_currentState.TEnxaguar 0 0 0 0 1 0 1 
-s_currentState.TSpin 0 0 0 1 0 0 1 
-s_currentState.TTirarAgua 0 0 1 0 0 0 1 
-s_currentState.TFinish 0 1 0 0 0 0 1 
-s_currentState.TMeterAgua 1 0 0 0 0 0 1 
+State Machine - |P1Teste|P1TesteFSM:inst14|s_currentState
+Name s_currentState.TP3 s_currentState.TP2 s_currentState.TMeterAgua s_currentState.TFinish s_currentState.TTirarAgua s_currentState.TSpin s_currentState.TEnxaguar s_currentState.TP1 s_currentState.TInit 
+s_currentState.TInit 0 0 0 0 0 0 0 0 0 
+s_currentState.TP1 0 0 0 0 0 0 0 1 1 
+s_currentState.TEnxaguar 0 0 0 0 0 0 1 0 1 
+s_currentState.TSpin 0 0 0 0 0 1 0 0 1 
+s_currentState.TTirarAgua 0 0 0 0 1 0 0 0 1 
+s_currentState.TFinish 0 0 0 1 0 0 0 0 1 
+s_currentState.TMeterAgua 0 0 1 0 0 0 0 0 1 
+s_currentState.TP2 0 1 0 0 0 0 0 0 1 
+s_currentState.TP3 1 0 0 0 0 0 0 0 1 
