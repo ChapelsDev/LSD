@@ -156,10 +156,10 @@ architecture Behavioral of P1TesteFSM is
 			on_off <= '1';
 			timeEnable <= '1';
 			timeValue <= enxaguar_TIME;
-			s_ultimoestado_1 <= '0';
 			
-			if (timeExp = '1' and startStop = '1' and s_ultimoestado_1 ='0' and s_ultimoestado_2 = '1')then
+			if (timeExp = '1' and startStop = '1' and s_ultimoestado_1 ='1' and s_ultimoestado_2 = '1')then
 				s_nextstate <= TTirarAgua;
+				s_ultimoestado_1 <= '0';
 			elsif (timeExp = '1' and startStop = '1') then
 				s_nextstate <= TTirarAgua;
 				s_ultimoestado <= '1';

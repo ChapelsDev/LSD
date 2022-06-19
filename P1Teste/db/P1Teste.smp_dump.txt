@@ -1,5 +1,5 @@
 
-State Machine - |P1Teste|P1TesteFSM:inst7|s_currentState
+State Machine - |P1TesteFSM|s_currentState
 Name s_currentState.TMeterAgua s_currentState.TFinish s_currentState.TTirarAgua s_currentState.TSpin s_currentState.TEnxaguar s_currentState.TP1 s_currentState.TInit 
 s_currentState.TInit 0 0 0 0 0 0 0 
 s_currentState.TP1 0 0 0 0 0 1 1 
