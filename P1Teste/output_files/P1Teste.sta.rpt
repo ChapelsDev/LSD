@@ -1,5 +1,5 @@
 Timing Analyzer report for P1Teste
-Sun Jun 19 16:01:00 2022
+Sun Jun 19 16:40:46 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -114,18 +114,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.33        ;
-; Maximum used               ; 6           ;
+; Average used               ; 1.28        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.9%      ;
-;     Processor 3            ;   6.9%      ;
-;     Processor 4            ;   6.2%      ;
-;     Processors 5-6         ;   5.8%      ;
+;     Processor 2            ;   5.3%      ;
+;     Processor 3            ;   4.5%      ;
+;     Processor 4            ;   4.0%      ;
+;     Processors 5-8         ;   3.6%      ;
 +----------------------------+-------------+
 
 
@@ -1606,8 +1606,8 @@ No paths to report.
 ; 0.789 ; P1TesteFSM:inst14|s_currentState.TP2        ; MaqLavarTimer:inst2|s_counter[1]            ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 1.217      ; 1.654      ;
 ; 0.806 ; MaqLavarTimer:inst2|s_cntZero               ; P1TesteFSM:inst14|s_currentState.TSpin      ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 0.793      ; 1.247      ;
 ; 0.839 ; P1TesteFSM:inst14|s_currentState.TP1        ; MaqLavarTimer:inst2|s_counter[5]            ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 0.552      ; 1.039      ;
-; 0.848 ; P1TesteFSM:inst14|s_currentState.TP1        ; MaqLavarTimer:inst2|s_counter[4]            ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 0.552      ; 1.048      ;
 ; 0.848 ; P1TesteFSM:inst14|s_currentState.TP2        ; MaqLavarTimer:inst2|s_counter[0]            ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 1.217      ; 1.713      ;
+; 0.848 ; P1TesteFSM:inst14|s_currentState.TP1        ; MaqLavarTimer:inst2|s_counter[4]            ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 0.552      ; 1.048      ;
 ; 0.881 ; P1TesteFSM:inst14|s_currentState.TEnxaguar  ; MaqLavarTimer:inst2|s_counter[4]            ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 1.198      ; 1.727      ;
 ; 0.922 ; MaqLavarTimer:inst2|s_cntZero               ; P1TesteFSM:inst14|s_currentState.TEnxaguar  ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; -0.500       ; 0.119      ; 0.689      ;
 ; 0.945 ; MaqLavarTimer:inst2|s_counter[1]            ; MaqLavarTimer:inst2|s_counter[1]            ; ClkDividerN:inst|clkOut                  ; ClkDividerN:inst|clkOut ; 0.000        ; 0.054      ; 1.127      ;
@@ -2242,11 +2242,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 19 16:00:58 2022
+    Info: Processing started: Sun Jun 19 16:40:43 2022
 Info: Command: quartus_sta P1Teste -c P1Teste
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (21077): Low junction temperature is -40 degrees C
 Info (21077): High junction temperature is 100 degrees C
 Warning (335093): The Timing Analyzer is analyzing 6 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
@@ -2345,9 +2345,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4876 megabytes
-    Info: Processing ended: Sun Jun 19 16:01:00 2022
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4902 megabytes
+    Info: Processing ended: Sun Jun 19 16:40:46 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

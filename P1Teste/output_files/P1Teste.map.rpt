@@ -1,5 +1,5 @@
 Analysis & Synthesis report for P1Teste
-Sun Jun 19 16:00:38 2022
+Sun Jun 19 16:40:20 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 19 16:00:38 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 19 16:40:20 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; P1Teste                                     ;
 ; Top-level Entity Name              ; P1Teste                                     ;
@@ -160,42 +160,42 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
-; P1TesteFSM.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd             ;         ;
-; P1Teste.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1Teste.bdf                ;         ;
-; Bin2BCD.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd                ;         ;
-; Bin7SegDecoder.vhd               ; yes             ; User VHDL File                     ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin7SegDecoder.vhd         ;         ;
-; ClkDividerN.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/ClkDividerN.vhd            ;         ;
-; DisplayDecoderP.vhd              ; yes             ; User VHDL File                     ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/DisplayDecoderP.vhd        ;         ;
-; MaqLavarTimer.vhd                ; yes             ; User VHDL File                     ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/MaqLavarTimer.vhd          ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf             ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc            ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc        ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc             ;         ;
-; db/lpm_divide_q9m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/lpm_divide_q9m.tdf      ;         ;
-; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/sign_div_unsign_fkh.tdf ;         ;
-; db/alt_u_div_i4f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/alt_u_div_i4f.tdf       ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/add_sub_7pc.tdf         ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/add_sub_8pc.tdf         ;         ;
-; db/lpm_divide_nhm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/lpm_divide_nhm.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; P1TesteFSM.vhd                   ; yes             ; User VHDL File                     ; D:/LSD/LSD/P1Teste/P1TesteFSM.vhd                                          ;         ;
+; P1Teste.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/LSD/LSD/P1Teste/P1Teste.bdf                                             ;         ;
+; Bin2BCD.vhd                      ; yes             ; User VHDL File                     ; D:/LSD/LSD/P1Teste/Bin2BCD.vhd                                             ;         ;
+; Bin7SegDecoder.vhd               ; yes             ; User VHDL File                     ; D:/LSD/LSD/P1Teste/Bin7SegDecoder.vhd                                      ;         ;
+; ClkDividerN.vhd                  ; yes             ; User VHDL File                     ; D:/LSD/LSD/P1Teste/ClkDividerN.vhd                                         ;         ;
+; DisplayDecoderP.vhd              ; yes             ; User VHDL File                     ; D:/LSD/LSD/P1Teste/DisplayDecoderP.vhd                                     ;         ;
+; MaqLavarTimer.vhd                ; yes             ; User VHDL File                     ; D:/LSD/LSD/P1Teste/MaqLavarTimer.vhd                                       ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_q9m.tdf            ; yes             ; Auto-Generated Megafunction        ; D:/LSD/LSD/P1Teste/db/lpm_divide_q9m.tdf                                   ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction        ; D:/LSD/LSD/P1Teste/db/sign_div_unsign_fkh.tdf                              ;         ;
+; db/alt_u_div_i4f.tdf             ; yes             ; Auto-Generated Megafunction        ; D:/LSD/LSD/P1Teste/db/alt_u_div_i4f.tdf                                    ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/LSD/LSD/P1Teste/db/add_sub_7pc.tdf                                      ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/LSD/LSD/P1Teste/db/add_sub_8pc.tdf                                      ;         ;
+; db/lpm_divide_nhm.tdf            ; yes             ; Auto-Generated Megafunction        ; D:/LSD/LSD/P1Teste/db/lpm_divide_nhm.tdf                                   ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------+
@@ -476,7 +476,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -486,113 +486,109 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 19 16:00:28 2022
+    Info: Processing started: Sun Jun 19 16:40:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off P1Teste -c P1Teste
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file p1testefsm.vhd
-    Info (12022): Found design unit 1: P1TesteFSM-Behavioral File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 24
-    Info (12023): Found entity 1: P1TesteFSM File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 4
+    Info (12022): Found design unit 1: P1TesteFSM-Behavioral File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 24
+    Info (12023): Found entity 1: P1TesteFSM File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file p1teste.bdf
     Info (12023): Found entity 1: P1Teste
 Info (12021): Found 2 design units, including 1 entities, in source file bin2bcd.vhd
-    Info (12022): Found design unit 1: Bin2BCD-Behavioral File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 10
-    Info (12023): Found entity 1: Bin2BCD File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 5
+    Info (12022): Found design unit 1: Bin2BCD-Behavioral File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 10
+    Info (12023): Found entity 1: Bin2BCD File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
-    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin7SegDecoder.vhd Line: 9
-    Info (12023): Found entity 1: Bin7SegDecoder File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin7SegDecoder.vhd Line: 4
+    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: D:/LSD/LSD/P1Teste/Bin7SegDecoder.vhd Line: 9
+    Info (12023): Found entity 1: Bin7SegDecoder File: D:/LSD/LSD/P1Teste/Bin7SegDecoder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file clkdividern.vhd
-    Info (12022): Found design unit 1: ClkDividerN-Behavioral File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/ClkDividerN.vhd Line: 11
-    Info (12023): Found entity 1: ClkDividerN File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/ClkDividerN.vhd Line: 5
+    Info (12022): Found design unit 1: ClkDividerN-Behavioral File: D:/LSD/LSD/P1Teste/ClkDividerN.vhd Line: 11
+    Info (12023): Found entity 1: ClkDividerN File: D:/LSD/LSD/P1Teste/ClkDividerN.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file displaydecoderp.vhd
-    Info (12022): Found design unit 1: DisplayDecoderP-Behavioral File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/DisplayDecoderP.vhd Line: 9
-    Info (12023): Found entity 1: DisplayDecoderP File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/DisplayDecoderP.vhd Line: 4
+    Info (12022): Found design unit 1: DisplayDecoderP-Behavioral File: D:/LSD/LSD/P1Teste/DisplayDecoderP.vhd Line: 9
+    Info (12023): Found entity 1: DisplayDecoderP File: D:/LSD/LSD/P1Teste/DisplayDecoderP.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file maqlavartimer.vhd
-    Info (12022): Found design unit 1: MaqLavarTimer-Behavioral File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/MaqLavarTimer.vhd Line: 15
-    Info (12023): Found entity 1: MaqLavarTimer File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/MaqLavarTimer.vhd Line: 5
+    Info (12022): Found design unit 1: MaqLavarTimer-Behavioral File: D:/LSD/LSD/P1Teste/MaqLavarTimer.vhd Line: 15
+    Info (12023): Found entity 1: MaqLavarTimer File: D:/LSD/LSD/P1Teste/MaqLavarTimer.vhd Line: 5
 Info (12127): Elaborating entity "P1Teste" for the top level hierarchy
 Info (12128): Elaborating entity "Bin7SegDecoder" for hierarchy "Bin7SegDecoder:inst7"
 Info (12128): Elaborating entity "Bin2BCD" for hierarchy "Bin2BCD:inst12"
 Info (12128): Elaborating entity "MaqLavarTimer" for hierarchy "MaqLavarTimer:inst2"
 Info (12128): Elaborating entity "ClkDividerN" for hierarchy "ClkDividerN:inst"
 Info (12128): Elaborating entity "P1TesteFSM" for hierarchy "P1TesteFSM:inst14"
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(89): signal "P2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(91): signal "P3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(108): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(131): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 131
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(137): signal "P2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(154): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(156): signal "P3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(230): signal "s_ultimoestado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 230
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(230): signal "s_ultimoestado_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 230
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(232): signal "s_ultimoestado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 232
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(232): signal "s_ultimoestado_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 232
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(234): signal "s_ultimoestado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 234
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(278): signal "s_isP1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 278
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(282): signal "s_ultimoestado_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 282
-Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(282): signal "s_ultimoestado_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 282
-Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "water_valve", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "rinse", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_ultimoestado", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_ultimoestado_1", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_ultimoestado_2", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_isP1", which holds its previous value in one or more paths through the process File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Info (10041): Inferred latch for "s_isP1" at P1TesteFSM.vhd(73) File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Info (10041): Inferred latch for "s_ultimoestado_2" at P1TesteFSM.vhd(73) File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Info (10041): Inferred latch for "s_ultimoestado_1" at P1TesteFSM.vhd(73) File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Info (10041): Inferred latch for "s_ultimoestado" at P1TesteFSM.vhd(73) File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Info (10041): Inferred latch for "rinse" at P1TesteFSM.vhd(73) File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
-Info (10041): Inferred latch for "water_valve" at P1TesteFSM.vhd(73) File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(108): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(131): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 131
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(154): signal "startStop" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 154
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(230): signal "s_ultimoestado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 230
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(230): signal "s_ultimoestado_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 230
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(232): signal "s_ultimoestado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 232
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(232): signal "s_ultimoestado_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 232
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(234): signal "s_ultimoestado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 234
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(278): signal "s_isP1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 278
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(282): signal "s_ultimoestado_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 282
+Warning (10492): VHDL Process Statement warning at P1TesteFSM.vhd(282): signal "s_ultimoestado_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 282
+Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "water_valve", which holds its previous value in one or more paths through the process File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "rinse", which holds its previous value in one or more paths through the process File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_ultimoestado", which holds its previous value in one or more paths through the process File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_ultimoestado_1", which holds its previous value in one or more paths through the process File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_ultimoestado_2", which holds its previous value in one or more paths through the process File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Warning (10631): VHDL Process Statement warning at P1TesteFSM.vhd(73): inferring latch(es) for signal or variable "s_isP1", which holds its previous value in one or more paths through the process File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Info (10041): Inferred latch for "s_isP1" at P1TesteFSM.vhd(73) File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Info (10041): Inferred latch for "s_ultimoestado_2" at P1TesteFSM.vhd(73) File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Info (10041): Inferred latch for "s_ultimoestado_1" at P1TesteFSM.vhd(73) File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Info (10041): Inferred latch for "s_ultimoestado" at P1TesteFSM.vhd(73) File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Info (10041): Inferred latch for "rinse" at P1TesteFSM.vhd(73) File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
+Info (10041): Inferred latch for "water_valve" at P1TesteFSM.vhd(73) File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 73
 Info (12128): Elaborating entity "DisplayDecoderP" for hierarchy "DisplayDecoderP:inst4"
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst12|Mod0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst12|Div0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 18
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst11|Mod0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst11|Div0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 18
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst12|lpm_divide:Mod0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 19
-Info (12133): Instantiated megafunction "Bin2BCD:inst12|lpm_divide:Mod0" with the following parameter: File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst12|Mod0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst12|Div0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst11|Mod0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Bin2BCD:inst11|Div0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 18
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst12|lpm_divide:Mod0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 19
+Info (12133): Instantiated megafunction "Bin2BCD:inst12|lpm_divide:Mod0" with the following parameter: File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 19
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q9m.tdf
-    Info (12023): Found entity 1: lpm_divide_q9m File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/lpm_divide_q9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_q9m File: D:/LSD/LSD/P1Teste/db/lpm_divide_q9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_fkh File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/sign_div_unsign_fkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_fkh File: D:/LSD/LSD/P1Teste/db/sign_div_unsign_fkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i4f.tdf
-    Info (12023): Found entity 1: alt_u_div_i4f File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/alt_u_div_i4f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_i4f File: D:/LSD/LSD/P1Teste/db/alt_u_div_i4f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: D:/LSD/LSD/P1Teste/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst12|lpm_divide:Div0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 18
-Info (12133): Instantiated megafunction "Bin2BCD:inst12|lpm_divide:Div0" with the following parameter: File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 18
+    Info (12023): Found entity 1: add_sub_8pc File: D:/LSD/LSD/P1Teste/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst12|lpm_divide:Div0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 18
+Info (12133): Instantiated megafunction "Bin2BCD:inst12|lpm_divide:Div0" with the following parameter: File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 18
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_nhm.tdf
-    Info (12023): Found entity 1: lpm_divide_nhm File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/lpm_divide_nhm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst11|lpm_divide:Mod0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 19
-Info (12133): Instantiated megafunction "Bin2BCD:inst11|lpm_divide:Mod0" with the following parameter: File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 19
+    Info (12023): Found entity 1: lpm_divide_nhm File: D:/LSD/LSD/P1Teste/db/lpm_divide_nhm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst11|lpm_divide:Mod0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 19
+Info (12133): Instantiated megafunction "Bin2BCD:inst11|lpm_divide:Mod0" with the following parameter: File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 19
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst11|lpm_divide:Div0" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 18
-Info (12133): Instantiated megafunction "Bin2BCD:inst11|lpm_divide:Div0" with the following parameter: File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/Bin2BCD.vhd Line: 18
+Info (12130): Elaborated megafunction instantiation "Bin2BCD:inst11|lpm_divide:Div0" File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 18
+Info (12133): Instantiated megafunction "Bin2BCD:inst11|lpm_divide:Div0" with the following parameter: File: D:/LSD/LSD/P1Teste/Bin2BCD.vhd Line: 18
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Warning (13012): Latch P1TesteFSM:inst14|s_ultimoestado_1 has unsafe behavior File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 43
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TEnxaguar File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 40
-Warning (13012): Latch P1TesteFSM:inst14|s_ultimoestado has unsafe behavior File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 42
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TEnxaguar File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 40
-Warning (13012): Latch P1TesteFSM:inst14|s_isP1 has unsafe behavior File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TP2 File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 40
-Warning (13012): Latch P1TesteFSM:inst14|s_ultimoestado_2 has unsafe behavior File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 44
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TEnxaguar File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/P1TesteFSM.vhd Line: 40
+Warning (13012): Latch P1TesteFSM:inst14|s_ultimoestado_1 has unsafe behavior File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 43
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TEnxaguar File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 40
+Warning (13012): Latch P1TesteFSM:inst14|s_ultimoestado has unsafe behavior File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 42
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TEnxaguar File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 40
+Warning (13012): Latch P1TesteFSM:inst14|s_isP1 has unsafe behavior File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 45
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TP2 File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 40
+Warning (13012): Latch P1TesteFSM:inst14|s_ultimoestado_2 has unsafe behavior File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 44
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal P1TesteFSM:inst14|s_currentState.TEnxaguar File: D:/LSD/LSD/P1Teste/P1TesteFSM.vhd Line: 40
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX6[5]" is stuck at VCC
     Warning (13410): Pin "HEX7[6]" is stuck at GND
@@ -604,18 +600,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "Bin2BCD:inst11|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|add_sub_6_result_int[0]~14" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/alt_u_div_i4f.tdf Line: 57
-    Info (17048): Logic cell "Bin2BCD:inst11|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|add_sub_6_result_int[0]~14" File: C:/Users/Afonso/OneDrive/Documentos/pFinal/LSD/P1Teste/db/alt_u_div_i4f.tdf Line: 57
+    Info (17048): Logic cell "Bin2BCD:inst11|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|add_sub_6_result_int[0]~14" File: D:/LSD/LSD/P1Teste/db/alt_u_div_i4f.tdf Line: 57
+    Info (17048): Logic cell "Bin2BCD:inst11|lpm_divide:Div0|lpm_divide_nhm:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider|add_sub_6_result_int[0]~14" File: D:/LSD/LSD/P1Teste/db/alt_u_div_i4f.tdf Line: 57
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 461 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 47 output pins
     Info (21061): Implemented 408 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Sun Jun 19 16:00:38 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4869 megabytes
+    Info: Processing ended: Sun Jun 19 16:40:20 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 

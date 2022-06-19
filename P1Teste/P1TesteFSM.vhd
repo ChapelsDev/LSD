@@ -70,7 +70,7 @@ architecture Behavioral of P1TesteFSM is
 	
 	newTime <= s_stateChanged;
 	
-	set_proc : process(s_currentState, timeExp, reset, P1)
+	set_proc : process(s_currentState, timeExp, reset, P1,P2,P3)
 	begin
 		case (s_currentState) is
 		when TInit =>
@@ -106,11 +106,11 @@ architecture Behavioral of P1TesteFSM is
 			timeValue <= P1_TIME;
 				
 			if (startStop = '1') then
-				s_nextState <= TMeterAgua;
 				s_ultimoestado <= '0';
 				s_ultimoestado_1 <= '0';
 				s_ultimoestado_2 <= '0';
 				s_isP1 <= '1';
+				s_nextState <= TMeterAgua;
 			elsif (P1 = '0') then
 				s_nextState <= TInit;
 			else 
@@ -129,11 +129,11 @@ architecture Behavioral of P1TesteFSM is
 			timeValue <= P2_TIME;
 			
 			if (startStop = '1') then
-				s_nextState <= TMeterAgua;
 				s_ultimoestado <= '0';
 				s_ultimoestado_1 <= '0';
 				s_ultimoestado_2 <= '0';
 				s_isP1 <= '0';
+				s_nextState <= TMeterAgua;
 			elsif (P2 = '0') then
 				s_nextState <= TInit;
 			else
@@ -204,8 +204,8 @@ architecture Behavioral of P1TesteFSM is
 				--s_isS <= '1';
 			--else
 			if (timeExp = '1') then
-				s_nextstate <= TTirarAgua;
 				s_ultimoestado <= '0';
+				s_nextstate <= TTirarAgua;
 			else
 				s_nextState <= Tspin;
 			end if;
@@ -276,17 +276,17 @@ architecture Behavioral of P1TesteFSM is
 				--s_isE <= '1';
 			--else
 			if (timeExp = '1' and s_isP1 = '0') then
-				s_nextstate <= TTirarAgua;
 				s_ultimoestado <= '1';
 				s_ultimoestado_1 <= '0';
+				s_nextstate <= TTirarAgua;
 			elsif (timeExp = '1' and s_ultimoestado_1 ='1' and s_ultimoestado_2 = '1') then
-				s_nextstate <= TTirarAgua;
 				s_ultimoestado_1 <= '0';
-			elsif (timeExp = '1') then
 				s_nextstate <= TTirarAgua;
+			elsif (timeExp = '1') then
 				s_ultimoestado <= '1';
 				s_ultimoestado_1 <= '1';
 				s_ultimoestado_2 <= '1';
+				s_nextstate <= TTirarAgua;
 			else
 				s_nextState <= TEnxaguar;
 			end if;
