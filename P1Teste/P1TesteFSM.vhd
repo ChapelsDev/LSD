@@ -106,10 +106,10 @@ architecture Behavioral of P1TesteFSM is
 			timeValue <= P1_TIME;
 				
 			if (startStop = '1') then
+				s_isP1 <= '1';
 				s_ultimoestado <= '0';
 				s_ultimoestado_1 <= '0';
 				s_ultimoestado_2 <= '0';
-				s_isP1 <= '1';
 				s_nextState <= TMeterAgua;
 			elsif (P1 = '0') then
 				s_nextState <= TInit;
@@ -129,10 +129,10 @@ architecture Behavioral of P1TesteFSM is
 			timeValue <= P2_TIME;
 			
 			if (startStop = '1') then
+				s_isP1 <= '0';
 				s_ultimoestado <= '0';
 				s_ultimoestado_1 <= '0';
 				s_ultimoestado_2 <= '0';
-				s_isP1 <= '0';
 				s_nextState <= TMeterAgua;
 			elsif (P2 = '0') then
 				s_nextState <= TInit;
