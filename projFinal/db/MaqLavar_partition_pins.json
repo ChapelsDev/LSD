@@ -4,83 +4,143 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "displayEn",
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "water_valve",
+					"name" : "HEX0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "rinse",
+					"name" : "HEX0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "water_pump",
+					"name" : "HEX0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "spin",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "on_off",
+					"name" : "HEX0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "newTime",
+					"name" : "HEX0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "timeValue[0]",
+					"name" : "HEX1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "timeValue[1]",
+					"name" : "HEX1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "timeValue[2]",
+					"name" : "HEX1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "timeValue[3]",
+					"name" : "HEX1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "timeValue[4]",
+					"name" : "HEX1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "timeValue[5]",
+					"name" : "HEX4[6]",
 					"strict" : false
 				},
 				{
-					"name" : "timeEnable",
+					"name" : "HEX4[4]",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "HEX4[3]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "HEX4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "timeExp",
+					"name" : "HEX4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "P1",
+					"name" : "HEX4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "P2",
+					"name" : "HEX5[6]",
 					"strict" : false
 				},
 				{
-					"name" : "P3",
+					"name" : "HEX5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG8",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG0",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
 					"strict" : false
 				}
 			]

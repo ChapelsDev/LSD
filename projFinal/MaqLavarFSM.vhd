@@ -6,17 +6,18 @@ entity MaqLavarFSM is
 			P1    	   : in  std_logic;	-- Setting 1 
 			P2    	   : in  std_logic;	-- Setting 2
 			P3    	   : in  std_logic;	-- Setting 3
-			-- startStop   : in  std_logic;	-- Start/stop
+			startStop   : in  std_logic;	-- Start/stop
 			clk         : in  std_logic;	-- Clock
-			displayEn    : out std_logic;  -- Display
-  			water_valve : out std_logic;	-- Water Valve (Meter Água) 
+			display1    : out std_logic;  -- Display P 
+  			display2    : out std_logic;  -- Display 1,2,3
+			water_valve : out std_logic;	-- Water Valve (Meter Água) 
 			rinse       : out std_logic; 	-- Rinse (Enxaguar)
 			water_pump  : out std_logic;	-- Water Pump (Tirar Água)
 			spin        : out std_logic; 	-- Spin (Rotação do tambor)
 			on_off      : out std_logic;	-- On/Off Output of the machine
 			newTime     : out std_logic;	-- New time
 			timeValue   : out std_logic_vector(7 downto 0);	-- Duration of the tasks 
-			timeEnable  : out std_logic;
+			timeEnable  : out std_logic; -- Time Enable 
 			timeExp     : in std_logic); -- Time Expired
 end MaqLavarFSM;
 
@@ -32,7 +33,7 @@ architecture Behavioral of MaqLavarFSM is
 	constant finish_TIME    : std_logic_vector(7 downto 0) := "00000010"; -- 2s  
 	
 	type TState is (TInit, TP1, TP2,
-						 TP3, TMeterAgua,
+						 TP3, TMA1, TMA2,
 						 TEnxaguar, TSpin,
 						 TTirarAgua, TFinish);
 						 
@@ -60,7 +61,7 @@ begin
 	
 	newTime <= s_stateChanged;
 	
-	set_proc : process(s_currentState, timeExp)
+	set_proc : process(s_currentState, timeExp, reset, P1, P2, P3)
 	begin
 		case (s_currentState) is
 		when TInit =>
@@ -71,7 +72,7 @@ begin
 			spin <= '0';
 			on_off <= '0';
 			timeEnable <= '0';
-			timeValue <= (others => '-');
+			timeValue <= (others => '0');
 			if (P1 = '1') then
 				s_nextState <= TP1;
 			elsif (P2 = '1') then
@@ -109,11 +110,11 @@ begin
 			timeEnable <= '0';
 			timeValue <= P1_TIME;
 				
-			--if (startStop = '1') then
+			if (startStop = '1') then
 				s_nextState <= TMeterAgua;
-			--else 
-				--s_nextState <= TP1;
-			--end if;
+			else 
+				s_nextState <= TP1;
+			end if;
 	
 		when TP2 =>
 			displayEn <= '1';
@@ -125,11 +126,11 @@ begin
 			timeEnable <= '0';
 			timeValue <= P2_TIME;
 			
-			-- if (startStop = '1') then
+			if (startStop = '1') then
 				s_nextState <= TMeterAgua;
-			-- else 
-				-- s_nextState <= TP2;
-			-- end if;
+			else
+				s_nextState <= TP2;
+			end if;
 			
 		when TP3 =>
 			displayEn <= '1';
@@ -141,11 +142,11 @@ begin
 			timeEnable <= '0';
 			timeValue <= P3_TIME;
 			
-			-- if (startStop = '1') then
+			if (startStop = '1') then
 				s_nextState <= TSpin;
-			--else 
-				--s_nextState <= TP3;
-			--end if;
+			else 
+				s_nextState <= TP3;
+			end if;
 		
 		when TMeterAgua =>
 			displayEn <= '1';
@@ -157,17 +158,17 @@ begin
 			timeEnable <= '1';
 			timeValue <= meterAgua_TIME;
 		
-			-- if (startStop = '1') then
-				-- s_nextState <= TStop;
-			-- else	
-				if (timeExp = '1') then
-					if (P1 = '1' or P2 = '1') then
-						s_nextState <= TEnxaguar;
-					end if;
-				else 
-					s_nextState <= TMeterAgua;
+			--if (startStop = '1') then
+				--s_nextState <= TStop;
+			--else	
+			if (timeExp = '1') then
+				if (P1 = '1' or P2 = '1') then
+					s_nextState <= TEnxaguar;
+				end if;
+			else 
+				s_nextState <= TMeterAgua;
 				end if;	
-			-- end if;
+			--end if;
 		
 		when TEnxaguar =>
 			displayEn <= '1';
@@ -179,16 +180,16 @@ begin
 			timeEnable <= '1';
 			timeValue <= enxaguar_TIME;
 		
-			-- if (startStop = '1') then
-				-- s_nextState <= TStop;
+			--if (startStop = '1') then
+				--s_nextState <= TStop;
 			-- else
-				if (timeExp = '1') then
-					if (P1 = '1' or P2 = '1') then
-						s_nextState <= TTirarAgua;
-					end if;
-				else
-					s_nextState <= TEnxaguar;
+			if (timeExp = '1') then
+				if (P1 = '1' or P2 = '1') then
+					s_nextState <= TTirarAgua;
 				end if;
+			else
+				s_nextState <= TEnxaguar;
+			end if;
 			-- end if;
 		
 		when TTirarAgua =>
@@ -204,18 +205,18 @@ begin
 			-- if (startStop = '1') then
 				-- s_nextState <= TStop;
 			-- else
-				if (timeExp = '1') then
-					if (P1 = '1' and s_repeat = '1') then
-						s_nextState <= TMeterAgua;
-						s_repeat <= '0';
-					elsif (P1 = '1' or P2 = '1') then
-						s_nextState <= TSpin;
-					elsif (P1 = '1' or P2 = '1' or P3 = '1') then
-						s_nextState <= TFinish;
-					end if;
-				else
-					s_nextState <= TTirarAgua;
+			if (timeExp = '1') then
+				if (P1 = '1' and s_repeat = '1') then
+					s_nextState <= TMeterAgua;
+					s_repeat <= '0';
+				elsif (P1 = '1' or P2 = '1') then
+					s_nextState <= TSpin;
+				elsif (P1 = '1' or P2 = '1' or P3 = '1') then
+					s_nextState <= TFinish;
 				end if;
+			else
+				s_nextState <= TTirarAgua;
+			end if;
 			-- end if;
 		
 		when TSpin =>
@@ -231,11 +232,11 @@ begin
 			-- if (startStop = '1') then
 				-- s_nextState <= TStop;
 			-- else
-				if (timeExp = '1') then
-					s_nextState <= TTirarAgua;
-				else
-					s_nextState <= TSpin;
-				end if;
+			if (timeExp = '1') then
+				s_nextState <= TTirarAgua;
+			else
+				s_nextState <= TSpin;
+			end if;
 			-- end if;
 			
 		when TFinish =>

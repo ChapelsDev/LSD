@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Jun 16 23:44:46 2022
+Analysis & Synthesis Status : Successful - Fri Jun 17 15:14:06 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : MaqLavar
-Top-level Entity Name : MaqLavarFSM
+Top-level Entity Name : MaqLavarTest
 Family : Cyclone IV E
-Total logic elements : 45
-    Total combinational functions : 45
-    Dedicated logic registers : 10
-Total registers : 10
-Total pins : 22
+Total logic elements : 239
+    Total combinational functions : 230
+    Dedicated logic registers : 76
+Total registers : 76
+Total pins : 40
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
